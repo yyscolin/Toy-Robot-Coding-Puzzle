@@ -39,7 +39,8 @@ def do_robot_action():
   # Separate the main action from the rest of the arguments
   [action, *args] = input_command.strip().lower().split(" ", 1)
 
-  if action not in ["place", "move", "left", "right", "report"]:
+  is_valid_action = action in ["place", "move", "left", "right", "report"]
+  if not is_valid_action:
     print(f"Invalid action: {action.upper()}")
     return
 
@@ -132,6 +133,5 @@ current_f = None
 
 # Start taking commands
 print(WECLOME_MESSAGE)
-do_robot_action()
 while True:
   do_robot_action()
