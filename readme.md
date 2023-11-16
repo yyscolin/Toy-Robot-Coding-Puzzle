@@ -61,3 +61,5 @@ To run the program:
 `python3 toy_robot.py`
 
 The program will prompt you for inputs.
+
+To exit the program press `ctrl + c`
